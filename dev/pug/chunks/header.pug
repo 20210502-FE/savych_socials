@@ -1,0 +1,22 @@
+header.header
+    .wrapper.flex.flex_align-center.flex_space-between
+        .header__left.flex.flex_align-center
+            .header__burger
+                span.header__burger-line
+                span.header__burger-line
+                span.header__burger-line
+            .logo.header__logo
+                a(href="/")
+                    img(src="./assets/images/logo.png" alt="Social")
+        .search
+            input(type="text" placeholder="Search").search__input
+            button(type="submit").search__button.flex.flex_content-end.flex_align-center
+                i.icon.bg-search
+        .header__right.flex.flex_align-center
+            a(href="/").header__home
+                i.icon.bg-home
+            a(href="/").header__like
+                i.icon.bg-like
+            a(href="/").header__profile
+                img(src="./assets/images/user.png" alt="user logo")
+

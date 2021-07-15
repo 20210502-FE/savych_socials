@@ -1,0 +1,82 @@
+-
+    var cards = [
+        {
+            userImage: 'assets/images/olivia.png',
+            userName: 'Olivia Little',
+            career: 'UI / UX Designer',
+            location: 'Seattle, USA',
+            languages: 'English, Spanish',
+            bgColor: 'card_grandis'
+        },
+        {
+            userImage: 'assets/images/julia.png',
+            userName: 'Julia Kelley',
+            career: 'Product Designer',
+            location: 'Oslo, Canada',
+            languages: 'English, Portuguese',
+            bgColor: 'card_pattens-blue'
+        },
+        {
+            userImage: 'assets/images/kenneth.png',
+            userName: 'Kenneth Harmon',
+            career: 'Visual Designer',
+            location: 'Phoenix, USA',
+            languages: 'English',
+            bgColor: 'card_flesh'
+        },
+        {
+            userImage: 'assets/images/brian.png',
+            userName: 'Brian Fisher',
+            career: 'Motion Designer',
+            location: 'Austin, USA',
+            languages: 'English, Polish, Russian',
+            bgColor: 'card_anakiwa'
+        },
+        {
+            userImage: 'assets/images/jonas.png',
+            userName: 'Jonas Jacobs',
+            career: 'Information Architect',
+            location: 'San Jose, USA',
+            languages: 'English',
+            bgColor: 'card_aero-blue'
+        },
+        {
+            userImage: 'assets/images/joan.png',
+            userName: 'Joan Glenn',
+            career: 'Interaction Designer',
+            location: 'Houston, USA',
+            languages: 'English',
+            bgColor: 'card_mint-green'
+        }
+    ];
+
+section.cards
+    .wrapper
+        .cards__wrapper.flex.flex_wrap.flex_space-between
+            each card in cards
+                .cards__column
+                    .card.flex.card_small(class=card.bgColor)
+                        .card__image
+                            img(src=card.userImage alt=card.userName)
+                        .card__caption
+                            h4.card__user-name=card.userName
+                            .card__career=card.career
+                            .card__location=card.location
+                            .card__languages Speaks: !{card.languages}
+                        .card__icons.flex
+                            .card__socials
+                                a(href="#").card__link
+                                    i.icon.bg-telegram
+                                a(href="#").card__link
+                                    i.icon.bg-linkedin
+                                a(href="#").card__link
+                                    i.icon.bg-behance
+                                a(href="#").card__link
+                                    i.icon.bg-dribble
+                            .card__contacts
+                                a(href="#").card__link
+                                    i.icon.bg-chat
+                                a(href="#").card__link
+                                    i.icon.bg-micro
+                                a(href="#").card__link
+                                    i.icon.bg-video

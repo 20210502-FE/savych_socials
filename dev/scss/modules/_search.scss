@@ -1,0 +1,44 @@
+.search {
+  display: block;
+  position: relative;
+  flex-grow: 2;
+
+  @include respond-to(phone-only) {
+    display: none;
+  }
+
+  @include respond-to(tablet-portrait) {
+    display: none;
+  }
+
+  &__input {
+    width: 100%;
+    background: $color-white;
+    border: 1px solid $color-grey;
+    border-radius: 8px;
+    padding: 11px 0 11px 47px;
+
+    &::placeholder {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      text-transform: capitalize;
+      color: $color-grey;
+    }
+
+    @include respond-to(tablet-plandscape) {
+      width: 166px;
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 38px;
+    width: 34px;
+  }
+}

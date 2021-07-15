@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  margin: 0 auto;
+
+  @include respond-to(phone-only) {
+    max-width: calc(100% - 32px);
+  }
+
+  @include respond-to(tablet-portrait) {
+    max-width: calc(100% - 48px);
+  }
+
+  @include respond-to(tablet-landscape) {
+    max-width: calc(100% - 48px);
+  }
+
+  @include respond-to(desktop) {
+    max-width: calc(100% - 48px);
+  }
+
+  @include respond-to(big-desktop) {
+    max-width: 1100px;
+  }
+}

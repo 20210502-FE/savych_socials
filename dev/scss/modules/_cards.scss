@@ -1,0 +1,180 @@
+.cards {
+  min-height: calc(100vh - 76px - 52px);
+  padding-bottom: 50px;
+
+  &__column {
+    padding: 12px;
+    flex: 1;
+
+    @include respond-to(tablet-landscape) {
+     width: 50%;
+    }
+
+    @include respond-to(desktop) {
+      width: 50%;
+    }
+  }
+
+  &__wrapper {
+    margin: 0 -12px;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  position: relative;
+  width: 100%;
+
+  @include respond-to(phone-only) {
+    height: 228px;
+    min-width: 328px;
+  }
+
+  @include respond-to(tablet-portrait) {
+    height: 296px;
+    min-width: 478px;
+  }
+
+  @include respond-to(tablet-landscape) {
+    height: 228px;
+    min-width: 328px;
+  }
+
+  @include respond-to(desktop) {
+    height: 296px;
+    min-width: 400px;
+  }
+
+  &_grandis {
+    background-color: $color-grandis;
+  }
+
+  &_pattens-blue {
+    background-color: $color-pattens-blue;
+  }
+
+  &_flesh {
+    background-color: $color-flesh;
+  }
+
+  &_anakiwa {
+    background-color: $color-anakiwa;
+  }
+
+  &_aero-blue {
+    background-color: $color-aero-blue;
+  }
+
+  &_mint-green {
+    background-color: $color-mint-green;
+  }
+
+  &_small {
+    @include respond-to(phone-only) {
+      .card__user-name {
+        margin-bottom: 8px;
+      }
+
+      .card__location, .card__languages {
+        display: none;
+      }
+    }
+
+    @include respond-to(tablet-landscape) {
+      .card__user-name {
+        margin-bottom: 8px;
+      }
+
+      .card__location, .card__languages {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    width: 50%;
+    padding: 16px 8px;
+    background-color: #E2E2E2; //TODO add var
+    border-radius: 16px;
+
+    @include respond-to(phone-only) {
+      width: 56%;
+    }
+  }
+
+  &__caption {
+    padding: 16px;
+    font-family: "Open Sans";
+    color: $color-black;
+  }
+
+  &__user-name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  &__career {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+
+  &__location {
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icons {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  &__socials {
+    @include respond-to(phone-only) {
+      width: calc(56% + 16px);
+      padding-left: 8px;
+    }
+
+    @include respond-to(tablet-portrait) {
+      order: 2;
+    }
+
+    @include respond-to(tablet-landscape) {
+      width: calc(50% + 16px);
+      padding-left: 8px;
+    }
+
+    @include respond-to(desktop) {
+      order: 2;
+    }
+  }
+
+  &__contacts {
+    @include respond-to(tablet-portrait) {
+      width: calc(50% + 16px);
+      padding-left: 16px;
+    }
+
+    @include respond-to(desktop) {
+      width: calc(50% + 16px);
+      padding-left: 16px;
+    }
+  }
+}
